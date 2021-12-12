@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "gatsby";
 import logo from '../../images/shared/logo.svg';
 import hamburgerMenu from '../../images/shared/icon-hamburger.svg';
 import Navigation from '../Navigation';
@@ -13,9 +14,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <a href="/">
+      <Link to="/">
         <img src={logo} alt="Space travel logo" className="header__logo"></img>
-      </a>
+      </Link>
       <button className="header__menu--open">
           <img src={hamburgerMenu} alt="hamburger menu" onClick={toggleMenu}></img>
       </button>

@@ -3,9 +3,7 @@ body {
   font-family: $font-primary;
   color: $white;
   line-height: 32px;
-  background-image: url('../images/home/background-home-mobile.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }
 
 #gatsby-focus-wrapper {
@@ -64,4 +62,16 @@ button {
   //   outline: 88px solid $grey;
   //   transition: outline linear 250ms;
   // }
+}
+
+.homepage {
+  background-image: url('../images/home/background-home-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.destination {
+  background-image: url('../images/destination/background-destination-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
