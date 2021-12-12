@@ -9,6 +9,10 @@
     transform: translateX(100%);
     padding: 7.375rem 0 0 2rem;
 
+    &--open {
+      transform: translateX(0%);
+    }
+
   &__item {
     padding-bottom: 2rem;
     position: relative;

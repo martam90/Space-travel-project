@@ -7,15 +7,20 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(true);
+  }
+
   return (
     <header className="header">
       <a href="/">
         <img src={logo} alt="Space travel logo" className="header__logo"></img>
       </a>
       <button className="header__menu--open">
-          <img src={hamburgerMenu} alt="hamburger menu"></img>
+          <img src={hamburgerMenu} alt="hamburger menu" onClick={toggleMenu}></img>
       </button>
-      <Navigation />
+      <Navigation isOpen={isOpen} setIsOpen={setIsOpen}
+      />
     </header>
   );
 };

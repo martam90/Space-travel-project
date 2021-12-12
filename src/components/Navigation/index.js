@@ -1,12 +1,16 @@
 import React from 'react';
-// import navData from '../../../assets/navData';
 import iconClose from '../../images/shared/icon-close.svg';
 
-const Navigation = () => {
+const Navigation = ({isOpen, setIsOpen}) => {
+
+  const toggleMenu = () => {
+    setIsOpen(false);
+  }
+
   return (
-    <nav className="nav">
+    <nav className={isOpen ? 'nav nav--open' : 'nav'} >
       <ul className="nav__list">
-        <button className="nav__menu--close">
+        <button className="nav__menu--close" onClick={toggleMenu}>
           <img src={iconClose} alt="hamburger menu close"></img>
         </button>
           <li className="nav__item">
