@@ -14,9 +14,11 @@ p {
   margin: 0;
 }
 
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 

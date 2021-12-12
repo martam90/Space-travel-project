@@ -1,4 +1,4 @@
-{
+const pagesData = {
   "destinations": [
     {
       "name": "Moon",
@@ -106,3 +106,6 @@
     }
   ]
 }
+
+
+export default pagesData;

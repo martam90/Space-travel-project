@@ -1,45 +1,60 @@
 body {
   font-size: 1.125rem; //18px;
-  font-family: $font-secondary;
+  font-family: $font-primary;
   color: $white;
   line-height: 32px;
+  background-image: url('../images/home/background-home-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  font-size: 9.375rem; //150px;
-}
-
-h2 {
-  font-size: 6.25rem; //100px;
-}
-
-h3 {
-  font-size: 3.125rem; //56px;
-}
-
-h4 {
-  font-size: 2rem //32px;
-}
-
-h5 {
-  font-size: 1.75rem; // 28px;
-  letter-spacing: 4.75px;
-}
-
-.subheading-one {
-  font-size: 1.75rem; //28px;
-  font-family: $font-primary;
-}
-
-.subheading-two {
-  font-family: $font-secondary;
-  font-size: 0.875rem; //14px;
-  letter-spacing: 2.35px;
-}
-
-.nav-text {
-  font-family: $font-secondary;
   font-size: 1rem;
   letter-spacing: 2.7px;
+  color: $light-blue;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
 }
 
+// h2 {
+//   font-size: 6.25rem; //100px;
+// }
+
+// h3 {
+//   font-size: 3.125rem; //56px;
+// }
+
+// h4 {
+//   font-size: 2rem //32px;
+// }
+
+// h5 {
+//   font-size: 1.75rem; // 28px;
+//   letter-spacing: 4.75px;
+// }
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.cta {
+  display: block;
+  padding: 63px 28.5px;
+  background-color: $white;
+  color: $dark-blue;
+  font-family: $font-secondary;
+  font-size: 1.25rem;
+  line-height: 23px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  border-radius: 50%;
+  margin: 5rem auto 3rem auto;
+
+  // &:hover {
+  //   outline: 88px solid $grey;
+  //   transition: outline linear 250ms;
+  // }
+}
