@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Page from '../components/Page';
 import Main from '../components/Main';
-import favicon from '../images/shared/favicon-32x32.png';
+import favicon from '../../public/images/shared/favicon-32x32.png';
 
 const IndexPage = () => {
   return (
