@@ -119,19 +119,6 @@
       }
     }
   }
-
-  &__menu {
-    &--close {
-      display: block;
-      position: absolute;
-      top: 1.8rem;
-      right: 1.25rem;
-
-      @include tablet {
-        display: none;
-      }
-    }
-  }
 }
 
 // setting the bg color and backdrop filter for browser that support these properties
