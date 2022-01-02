@@ -1,0 +1,55 @@
+.main {
+  padding: 3rem 1.5rem 0 1.5rem;
+
+  &__heading-span {
+    padding: 1rem 0;
+    font-family: $font-secondary;
+    font-size: 5rem;
+    color: $white;
+
+    @include tablet {
+      font-size: 9.375rem;
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__homepage {
+    &--section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    color: $light-blue;
+
+    @include tablet {
+      font-size: 1rem;
+      max-width: 50ch;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      text-align: left;
+    }
+  }
+
+  @include desktop {
+    max-width: 80%;
+    margin: 15rem auto 5rem;
+    padding: 0;
+  }
+}

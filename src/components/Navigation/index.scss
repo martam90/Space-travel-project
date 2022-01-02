@@ -1,0 +1,130 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  min-width: 16rem;
+  // setting the darker bg color in case browser does not support glassmorphism bg
+  background-color: rgba(18, 18, 18, 0.95);
+  transform: translateX(100%);
+  padding: 7.375rem 0 0 2rem;
+
+  @include tablet {
+    position: static;
+    transform: none;
+    top: unset;
+    right: unset;
+    height: auto;
+    min-width: 60%;
+    padding: 2.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  &--open {
+    transform: translateX(0%);
+    transition: transform linear 250ms;
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    padding-bottom: 2rem;
+
+    @include tablet {
+      padding-bottom: 0;
+      padding-right: 1.5rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    color: $white;
+    text-transform: uppercase;
+    position: relative;
+
+    @include tablet {
+      font-size: 0.875rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+
+    &.active::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 31px;
+      background-color: $white;
+
+      @include tablet {
+        right: unset;
+        left: 50%;
+        transform: rotate(90deg);
+        top: 42px;
+        width: 3px;
+        height: 36px;
+      }
+
+      @include desktop {
+        top: -1px;
+        height: 127px;
+      }
+    }
+
+    &:hover::after {
+      @include tablet {
+        content: '';
+        position: absolute;
+        right: unset;
+        left: 50%;
+        transform: rotate(90deg);
+        top: 42px;
+        width: 3px;
+        height: 36px;
+        background: $light-grey;
+        transition: background-color linear 250ms;
+      }
+
+      @include desktop {
+        top: -1px;
+        height: 127px;
+      }
+    }
+
+    &--number {
+      font-weight: 700;
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: inline-block;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+// setting the bg color and backdrop filter for browser that support these properties
+@supports (backdrop-filter: blur(1.5rem)) {
+  .nav {
+    background-color: $transparent;
+    backdrop-filter: blur(1.5rem);
+  }
+}

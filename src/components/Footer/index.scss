@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+.attribution {
+  &__link {
+    color: $white;
+  }
+}

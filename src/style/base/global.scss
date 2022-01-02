@@ -1,45 +1,141 @@
 body {
   font-size: 1.125rem; //18px;
-  font-family: $font-secondary;
+  font-family: $font-primary;
   color: $white;
   line-height: 32px;
 }
 
+#gatsby-focus-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  min-height: 100vh;
+}
+
+// this applies to browsers that does not support :focus-visible
+:focus {
+  outline: max(2px, 0.1em) dotted $white;
+  outline-offset: 0.25em;
+}
+
+// these two rules apply when browser support :focus-visible
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: max(2px, 0.1em) dotted $white;
+  outline-offset: 0.25em;
+}
+
+// sr-only class visually hides elements on the website, but they are visible for screen readers 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 h1 {
-  font-size: 9.375rem; //150px;
-}
-
-h2 {
-  font-size: 6.25rem; //100px;
-}
-
-h3 {
-  font-size: 3.125rem; //56px;
-}
-
-h4 {
-  font-size: 2rem //32px;
-}
-
-h5 {
-  font-size: 1.75rem; // 28px;
-  letter-spacing: 4.75px;
-}
-
-.subheading-one {
-  font-size: 1.75rem; //28px;
-  font-family: $font-primary;
-}
-
-.subheading-two {
-  font-family: $font-secondary;
-  font-size: 0.875rem; //14px;
-  letter-spacing: 2.35px;
-}
-
-.nav-text {
-  font-family: $font-secondary;
   font-size: 1rem;
   letter-spacing: 2.7px;
+  color: $light-blue;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  max-width: 50ch;
+  margin: 0 auto;
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include desktop {
+    font-size: 1.75rem;
+    max-width: 40ch;
+  }
 }
 
+// h2 {
+//   font-size: 6.25rem; //100px;
+// }
+
+// h3 {
+//   font-size: 3.125rem; //56px;
+// }
+
+// h4 {
+//   font-size: 2rem //32px;
+// }
+
+// h5 {
+//   font-size: 1.75rem; // 28px;
+//   letter-spacing: 4.75px;
+// }
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.cta {
+  display: block;
+  padding: 4rem 1.7rem;
+  background-color: $white;
+  color: $dark-blue;
+  font-family: $font-secondary;
+  font-size: 1.25rem;
+  line-height: 23px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  border-radius: 50%;
+  margin: 5rem auto 3rem auto;
+
+
+  @include tablet {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 37px;
+    padding: 6.4375rem 2.8rem;
+
+    &:hover {
+      outline: 58px solid $transparent;
+      transition: outline linear 250ms;
+    }
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 7.4rem 3.8rem;
+
+    &:hover {
+      outline: 88px solid $transparent;
+    }
+  }
+  
+}
+
+.homepage {
+  background-image: url('/images/home/background-home-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    background-image: url('/images/home/background-home-tablet.jpg');
+  }
+
+  @include desktop {
+    background-image: url('/images/home/background-home-desktop.jpg');
+  }
+}
+
+.destination {
+  background-image: url('/images/destination/background-destination-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
