@@ -9,12 +9,15 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const openMenu = () => {
+    setIsOpen(true);
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false);
   }
 
   return (
-    
     <header className="header">
       <a href="#main" className="skip__links">Skip to main content</a>
       <Link to="/">
@@ -22,8 +25,8 @@ const Header = () => {
       </Link>
       <button className="header__menu" aria-expanded={isOpen ? "true" : "false"} aria-controls="navigation">
         <span className="sr-only">Menu</span>
-          <img className={isOpen ? "header__menu--img" : "header__menu--img active"} src={hamburgerMenu} alt="hamburger menu" onClick={toggleMenu}></img>
-          <img className={isOpen ? "header__menu--img active" : "header__menu--img"} src={iconClose} alt="hamburger menu close" onClick={toggleMenu}></img>
+          <img className={isOpen ? "header__menu--img" : "header__menu--img active"} src={hamburgerMenu} alt="hamburger menu" onClick={openMenu}></img>
+          <img className={isOpen ? "header__menu--img active" : "header__menu--img"} src={iconClose} alt="hamburger menu close" onClick={closeMenu}></img>
       </button>
       <Navigation id="navigation" isOpen={isOpen} setIsOpen={setIsOpen}
       />
