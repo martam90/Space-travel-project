@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-size: 1.125rem; //18px;
+  font-size: 1.125rem; // 18px;
   font-family: $font-primary;
   color: $white;
   line-height: 32px;
@@ -13,22 +17,25 @@ body {
 }
 
 // this applies to browsers that does not support :focus-visible
+
 :focus {
   outline: max(2px, 0.1em) dotted $white;
   outline-offset: 0.25em;
 }
 
 // these two rules apply when browser support :focus-visible
-:focus:not(:focus-visible) {
-  outline: none;
-}
 
 :focus-visible {
   outline: max(2px, 0.1em) dotted $white;
   outline-offset: 0.25em;
 }
 
-// sr-only class visually hides elements on the website, but they are visible for screen readers 
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// sr-only class visually hides elements on the website, but they are visible for screen readers
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -36,7 +43,7 @@ body {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
@@ -60,22 +67,33 @@ h1 {
   }
 }
 
-// h2 {
-//   font-size: 6.25rem; //100px;
-// }
+.subheading {
+  text-transform: uppercase;
+  text-align: center;
 
-// h3 {
-//   font-size: 3.125rem; //56px;
-// }
+  @include desktop {
+    text-align: left;
+  }
 
-// h4 {
-//   font-size: 2rem //32px;
-// }
+  &--blue {
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    line-height: 17px;
+    letter-spacing: 2.3px;
+    color: $light-blue;
+    padding-bottom: 0.75rem;
+  }
 
-// h5 {
-//   font-size: 1.75rem; // 28px;
-//   letter-spacing: 4.75px;
-// }
+  &--white {
+    font-family: $font-secondary;
+    font-size: 1.75rem;
+    line-height: 32px;
+  }
+
+  &-wrapper {
+    padding-bottom: 2rem;
+  }
+}
 
 button {
   background-color: inherit;
@@ -94,8 +112,7 @@ button {
   letter-spacing: 1.25px;
   text-transform: uppercase;
   border-radius: 50%;
-  margin: 5rem auto 3rem auto;
-
+  margin: 5rem auto 3rem;
 
   @include tablet {
     font-size: 2rem;
@@ -117,25 +134,32 @@ button {
       outline: 88px solid $transparent;
     }
   }
-  
 }
 
 .homepage {
-  background-image: url('/images/home/background-home-mobile.jpg');
+  background-image: url("/images/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include tablet {
-    background-image: url('/images/home/background-home-tablet.jpg');
+    background-image: url("/images/home/background-home-tablet.jpg");
   }
 
   @include desktop {
-    background-image: url('/images/home/background-home-desktop.jpg');
+    background-image: url("/images/home/background-home-desktop.jpg");
   }
 }
 
 .destination {
-  background-image: url('/images/destination/background-destination-mobile.jpg');
+  background-image: url("/images/destination/background-destination-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include tablet {
+    background-image: url("/images/destination/background-destination-tablet.jpg");
+  }
+
+  @include desktop {
+    background-image: url("/images/destination/background-destination-desktop.jpg");
+  }
 }
