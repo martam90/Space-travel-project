@@ -1,6 +1,6 @@
-$tablet: 43.75em; //700px;
-$desktop: 76em; //1216px;
-$desktop-lg: 90em; //1440px;
+$tablet: 43.75em; // 700px;
+$desktop: 76em; // 1216px;
+$desktop-lg: 90em; // 1440px;
 
 @mixin tablet {
   @media screen and(min-width: $tablet) {

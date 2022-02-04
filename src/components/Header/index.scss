@@ -16,14 +16,14 @@
   }
 
   @include desktop {
-    padding: 2.5rem 3.4rem 0 3.4rem;
+    padding: 2.5rem 3.4rem 0;
   }
 
   @include desktop {
     &::after {
-      content: '';
+      content: "";
       position: relative;
-      background-color: rgba(151, 151, 151, 0.25);
+      background-color: rgb(151 151 151 / 25%);
       height: 1px;
       order: -1;
       margin-right: -2rem;
@@ -53,7 +53,7 @@
 
     &--img {
       display: none;
-      
+
       &.active {
         display: block;
       }
@@ -62,7 +62,7 @@
 }
 
 // skip links
-.skip__links {
+.skip-links {
   background-color: $white;
   color: $dark-blue;
   padding: 0.3rem;

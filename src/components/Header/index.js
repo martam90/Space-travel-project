@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <a href="#main" className="skip__links">Skip to main content</a>
+      <a href="#main" className="skip-links">Skip to main content</a>
       <Link to="/">
         <img src={logo} alt="Space travel logo" className="header__logo"></img>
       </Link>
