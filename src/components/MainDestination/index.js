@@ -7,7 +7,7 @@ const MainDestination = () => {
   let currentDestination = pagesData.destinations[currentTab];
 
   return (
-    <main className="main__destination">
+    <main className="main__destination" id="main">
       <div className="main__content--top">
         <div className="main__title">
           <span className="main__title--number">01</span>
@@ -29,6 +29,10 @@ const MainDestination = () => {
         <div className="main__nav" aria-label="tab navigation">
           {pagesData.destinations.map((destination, index) => (
             <button
+              role="tab"
+              aria-label="tab button"
+              aria-selected={currentTab === index ? 'true' : 'false'}
+              key={index}
               className={
                 currentTab === index
                   ? 'main__nav--btn active'
