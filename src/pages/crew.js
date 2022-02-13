@@ -1,12 +1,15 @@
 import React from 'react';
+import MainCrew from '../components/MainCrew';
 import Page from '../components/Page';
 
 const Crew = () => {
   return (
     <>
-      <Page title="Space tourism website - crew">
-
-      </Page>
+      <div className="crew">
+        <Page title="Space tourism website - crew">
+          <MainCrew />
+        </Page>
+      </div>
     </>
   );
 };
