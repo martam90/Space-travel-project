@@ -90,7 +90,7 @@
   }
 
   &__content-img {
-    width: clamp(170px, 30vw, 445px);
+    width: clamp(10rem, 30vw, 40rem);
     margin: 0 auto;
   }
 
@@ -112,6 +112,7 @@
         @include desktop {
           font-size: 6.25rem;
           text-align: left;
+          margin: 0;
         }
       }
 
