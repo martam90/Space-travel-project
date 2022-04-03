@@ -64,7 +64,7 @@
     }
 
     &.active::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -89,7 +89,7 @@
 
     &:hover::after {
       @include tablet {
-        content: "";
+        content: '';
         position: absolute;
         right: unset;
         left: 50%;

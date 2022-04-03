@@ -19,7 +19,7 @@ const MainCrew = () => {
             <source srcSet={currentCrew.images.webp} type="image/webp" />
             <source srcSet={currentCrew.images.png} type="image/png" />
             <img
-              className="main__content-img"
+              className="main__crew-img"
               src={currentCrew.images.png}
               alt={currentCrew.name}
             />
