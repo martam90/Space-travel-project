@@ -6,7 +6,7 @@ const Crew = () => {
   return (
     <>
       <div className="crew">
-        <Page title="Space tourism website - crew">
+        <Page title="Crew">
           <MainCrew />
         </Page>
       </div>
