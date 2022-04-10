@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from '../Footer/index.js';
 import Header from '../Header/index.js';
 import { Helmet } from 'react-helmet';
 import favicon from '../../../public/images/shared/favicon-32x32.png';
+import { Planets } from 'react-preloaders';
 
+const Page = ({ children, title }) => {
+  const [loading, setLoading] = useState(true);
 
-const Page = ({children, title}) => {
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) => response.json())
+      .then((json) => {
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,8 +34,13 @@ const Page = ({children, title}) => {
         />
       </Helmet>
       <Header />
-      { children }
+      {children}
       <Footer />
+      <Planets
+        customLoading={loading}
+        background="linear-gradient(180deg, rgba(84,84,103,1) 6%, rgba(9,10,10,1) 100%)"
+        color={'#ffffff'}
+      />
     </>
   );
 };

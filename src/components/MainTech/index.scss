@@ -35,6 +35,10 @@
   font-size: 1rem;
   border: 1px solid $dark-blue;
 
+  &:hover {
+    border: 1px solid $white;
+  }
+
   @include tablet {
     width: 3.75rem;
     height: 3.75rem;

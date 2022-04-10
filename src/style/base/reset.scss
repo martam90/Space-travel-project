@@ -1,45 +1,45 @@
 *,
-*::before,
-*::after {
-  box-sizing: border-box;
+*:before,
+*:after {
+	box-sizing: border-box;
 }
 
 body,
 p {
-  margin: 0;
+	margin: 0;
 }
 
 ul,
 li {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
 }
 
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
-  padding: 0;
+	font: inherit;
+	padding: 0;
 }
