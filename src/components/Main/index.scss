@@ -62,3 +62,11 @@
 		text-align: left;
 	}
 }
+
+.main__homepage--heading {
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
+}
