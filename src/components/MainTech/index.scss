@@ -1,0 +1,139 @@
+.main__tech {
+  padding: 0 1.5rem;
+
+  @include desktop {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.main__nav--tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+
+  @include desktop {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    order: -1;
+    gap: 2rem;
+    padding: 0;
+  }
+}
+
+.main__nav--bullet {
+  display: block;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: $white;
+  font-size: 1rem;
+  border: 1px solid $dark-blue;
+
+  &:hover {
+    border: 1px solid $white;
+  }
+
+  @include tablet {
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.5rem;
+  }
+
+  @include desktop {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+
+  &.active {
+    background-color: $white;
+    color: $dark-blue;
+  }
+}
+
+.main__tech-img-wrapper {
+  display: flex;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.main__tech-img {
+  flex-grow: 1;
+}
+
+.main__content--bottom-tech {
+  text-align: center;
+  padding-top: 1.5rem;
+
+  @include desktop {
+    text-align: left;
+    padding-top: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.main__content--bottom-subtitle {
+  font-size: 0.875rem;
+  color: $light-blue;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+.main__content--bottom-title {
+  font-family: $font-secondary;
+  color: $white;
+  font-size: 1.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.main__content--bottom-desc {
+  margin: 0 auto;
+  max-width: 60ch;
+  color: $light-blue;
+  font-size: 0.9rem;
+  line-height: 25px;
+  padding-bottom: 0.9rem;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+
+  @include desktop {
+    font-size: 1.125rem;
+    line-height: 32px;
+    padding-bottom: 0;
+  }
+}
+
+.main__content--bottom-wrapper {
+  @include desktop {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 5rem;
+    place-items: center;
+  }
+}

@@ -137,43 +137,96 @@ button {
 }
 
 .homepage {
-  background-image: url("/images/home/background-home-mobile.jpg");
+  background-image: url('/images/home/background-home-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @include tablet {
-    background-image: url("/images/home/background-home-tablet.jpg");
+    background-image: url('/images/home/background-home-tablet.jpg');
   }
 
   @include desktop {
-    background-image: url("/images/home/background-home-desktop.jpg");
+    background-image: url('/images/home/background-home-desktop.jpg');
   }
 }
 
 .destination {
-  background-image: url("/images/destination/background-destination-mobile.jpg");
+  background-image: url('/images/destination/background-destination-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @include tablet {
-    background-image: url("/images/destination/background-destination-tablet.jpg");
+    background-image: url('/images/destination/background-destination-tablet.jpg');
   }
 
   @include desktop {
-    background-image: url("/images/destination/background-destination-desktop.jpg");
+    background-image: url('/images/destination/background-destination-desktop.jpg');
   }
 }
 
 .crew {
-  background-image: url("/images/crew/background-crew-mobile.jpg");
+  background-image: url('/images/crew/background-crew-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @include tablet {
-    background-image: url("/images/crew/background-crew-tablet.jpg");
+    background-image: url('/images/crew/background-crew-tablet.jpg');
   }
 
   @include desktop {
-    background-image: url("/images/crew/background-crew-desktop.jpg");
+    background-image: url('/images/crew/background-crew-desktop.jpg');
+  }
+}
+
+.technology {
+  background-image: url('/images/technology/background-technology-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    background-image: url('/images//technology/background-technology-tablet.jpg');
+  }
+
+  @include desktop {
+    background-image: url('/images/technology/background-technology-desktop.jpg');
+  }
+}
+
+// page404
+
+.p404 {
+  background: rgb(84, 84, 103);
+  background: linear-gradient(
+    180deg,
+    rgba(84, 84, 103, 1) 6%,
+    rgba(9, 10, 10, 1) 100%
+  );
+}
+
+.p404_content {
+  font-size: 1rem;
+  font-family: $font-primary;
+}
+
+.p404__link {
+  color: $white;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.p404__container {
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    max-width: none;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
   }
 }
