@@ -5,6 +5,8 @@ import { Planets } from 'react-preloaders';
 import Seo from '../Seo/index.js';
 
 const Page = ({ children, title }) => {
+  const isSSR = typeof window === 'undefined';
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,11 +26,13 @@ const Page = ({ children, title }) => {
       <Header />
       {children}
       <Footer />
-      <Planets
-        customLoading={loading}
-        background="linear-gradient(180deg, rgba(84,84,103,1) 6%, rgba(9,10,10,1) 100%)"
-        color={'#ffffff'}
-      />
+      {!isSSR && (
+        <Planets
+          customLoading={loading}
+          background="linear-gradient(180deg, rgba(84,84,103,1) 6%, rgba(9,10,10,1) 100%)"
+          color={'#ffffff'}
+        />
+      )}
     </>
   );
 };
