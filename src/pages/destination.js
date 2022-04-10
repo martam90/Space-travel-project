@@ -5,7 +5,7 @@ import MainDestination from '../components/MainDestination';
 const Destination = () => {
   return (
     <div className="destination">
-      <Page title="Space tourism website - destination">
+      <Page title="Destination">
       <MainDestination />
       </Page>
     </div>

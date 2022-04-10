@@ -3,10 +3,9 @@ import Page from '../components/Page';
 import Main from '../components/Main';
 
 const IndexPage = () => {
-
   return (
     <div className="homepage">
-      <Page title="Space tourism website - homepage">
+      <Page title="Homepage">
         <Main />
       </Page>
     </div>

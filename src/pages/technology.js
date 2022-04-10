@@ -5,7 +5,7 @@ import MainTech from '../components/MainTech';
 const Technology = () => {
   return (
     <div className="technology">
-      <Page title="Space tourism website - technology">
+      <Page title="Technology">
         <MainTech />
       </Page>
     </div>
