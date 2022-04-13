@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import image from '../../../static/images/share-image.png';
 
-const Seo = ({ description, lang, meta, title}) => {
+const Seo = ({ description, lang, meta, title }) => {
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -13,13 +15,12 @@ const Seo = ({ description, lang, meta, title}) => {
             description
             author
             keywords
-            image
           }
         }
       }
     `,
   );
-  const image = site.siteMetadata.image;
+
   const keywords = site.siteMetadata.keywords;
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
@@ -54,7 +55,7 @@ const Seo = ({ description, lang, meta, title}) => {
         },
         {
           property: `og:image`,
-          content: image,
+          content: `${image}`,
         },
         {
           name: `twitter:card`,
@@ -62,7 +63,7 @@ const Seo = ({ description, lang, meta, title}) => {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: `${image}`,
         },
         {
           name: `twitter:creator`,
@@ -89,7 +90,6 @@ Seo.defaultProps = {
 
 Seo.propTypes = {
   description: PropTypes.string,
-  image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
