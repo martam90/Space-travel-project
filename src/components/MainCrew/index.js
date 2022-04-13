@@ -9,10 +9,10 @@ const MainCrew = () => {
   return (
     <main className="main__crew" id="main">
       <div className="main__content--top">
-        <div className="main__title">
+        <h1 className="main__title">
           <span className="main__title--number">02</span>
           <span className="main__title--name">Meet your crew</span>
-        </div>
+        </h1>
 
         <div className="main__crew-tablet">
           <picture>
@@ -25,7 +25,7 @@ const MainCrew = () => {
             />
           </picture>
           <div className="main__content--bottom">
-            <div className="main__tabs" aria-label="tab navigation">
+            <div className="main__tabs" role="tablist" aria-label="tab navigation">
               {pagesData.crew.map((item, index) => (
                 <button
                   role="tab"
@@ -44,7 +44,7 @@ const MainCrew = () => {
             <div className="main__content--bottom--wrapper">
               <div className="main__content--bottom-heading">
                 <p className="heading__role">{currentCrew.role}</p>
-                <h1 className="heading__name">{currentCrew.name}</h1>
+                <h2 className="heading__name">{currentCrew.name}</h2>
               </div>
 
               <div className="main__content--bottom-details">
