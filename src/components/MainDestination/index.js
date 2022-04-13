@@ -9,10 +9,10 @@ const MainDestination = () => {
   return (
     <main className="main__destination" id="main">
       <div className="main__content--top">
-        <div className="main__title">
+        <h1 className="main__title">
           <span className="main__title--number">01</span>
           <span className="main__title--name">Pick your destination</span>
-        </div>
+        </h1>
 
         <picture>
           <source srcSet={currentDestination.images.webp} type="image/webp" />

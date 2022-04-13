@@ -5,11 +5,18 @@ module.exports = {
       'Space tourism is a project that takes you beyond your dreams and expectations. Book a tour with our agency and discover the Universe!',
     author: 'martam90',
     keywords: 'planets, journey, travel, space, adventure',
-    image: 'static/images/crew/image-douglas-hurley.png',
+    image: 'static/images/share-image.png',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/static/images`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

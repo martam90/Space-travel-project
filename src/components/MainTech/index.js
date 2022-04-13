@@ -16,10 +16,10 @@ const MainTech = () => {
 
   return (
     <main className="main__tech" id="main">
-      <div className="main__title">
+      <h1 className="main__title">
         <span className="main__title--number">03</span>
         <span className="main__title--name">Space Launch 101</span>
-      </div>
+      </h1>
       <div className="main__content--bottom-wrapper">
         <div className="main__tech-img-wrapper">
           {isMobileorTablet && (
